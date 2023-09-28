@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 4)
 
         // TODO (Step 2: Define lambda to modify displayTextView size)
-        val temp = { x: Int ->
-            displayTextView.textSize = x.toFloat()
+        val numberSet = { numberPass: Int ->
+            displayTextView.textSize = numberPass.toFloat()
         }
 
         // Todo (Step 3: Pass lambda to adapter)
-        recyclerView.adapter = NumberDisplayAdapter(numbers, temp)
+        recyclerView.adapter = NumberDisplayAdapter(numbers, numberSet)
 
         //val holder = NumberDisplayAdapter(numbers).NumberViewHolder(TextView(this))
     }
